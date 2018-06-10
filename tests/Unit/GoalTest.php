@@ -13,8 +13,20 @@ class GoalTest extends TestCase
      *
      * @return void
      */
-    public function testExample()
+    public function testCanCreateGoal()
     {
-        $this->assertTrue(true);
+        $data = [
+            'title' => $this->faker->word,
+            'link' => $this->faker->url,
+            'src' => $this->faker->url,
+        ];
+      
+        $goalRepo = new GoalRepository(new Goal);
+        $goal = $goalRepo->createGoal($data);
+      
+        $this->assertInstanceOf(Goal::class, $goal);
+        $this->assertEquals($data['title'], $goal->title);
+        $this->assertEquals($data['link'], $goal->link);
+        $this->assertEquals($data['image_src'], $goal->src);
     }
 }
