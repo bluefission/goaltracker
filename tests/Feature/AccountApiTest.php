@@ -8,13 +8,17 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class AccountApiTest extends TestCase
 {
-    /**
-     * A basic test example.
-     *
-     * @return void
-     */
-    public function testExample()
+    public function registerTest()
     {
-        $this->assertTrue(true);
+        $response = $this->post('/api/acccount/register');
+
+        $response->assertStatus(200);
+    }
+    
+    public function loginTest()
+    {
+        $response = $this->post('/api/acccount/login');
+
+        $response->assertStatus(200);
     }
 }
