@@ -44,7 +44,13 @@
             .content {
                 text-align: center;
             }
-
+            .content p {
+                max-width: 1000px;
+                color: #000 !important;
+                font-weight: 600;
+                margin: auto;
+                text-align: left;
+            }
             .title {
                 font-size: 84px;
             }
