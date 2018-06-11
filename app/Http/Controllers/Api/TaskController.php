@@ -10,7 +10,7 @@ class TaskController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        // $this->middleware('auth');
     }
     
     public function index(Request $request)
@@ -27,13 +27,6 @@ class TaskController extends Controller
     {
         $task = Task::create($request->all());
         
-        return response()->json($task, 201);
-    }
-
-    public function list(Request $request)
-    {
-        $task = Task::create($request->all());
-
         return response()->json($task, 201);
     }
 

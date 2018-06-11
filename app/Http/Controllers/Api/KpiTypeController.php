@@ -10,7 +10,7 @@ class KpiTypeController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        // $this->middleware('auth');
     }
     
     public function index(Request $request)
@@ -27,13 +27,6 @@ class KpiTypeController extends Controller
     {
         $kpiType = KpiType::create($request->all());
         
-        return response()->json($kpiType, 201);
-    }
-
-    public function list(Request $request)
-    {
-        $kpiType = KpiType::create($request->all());
-
         return response()->json($kpiType, 201);
     }
 

@@ -10,7 +10,7 @@ class QuantifierController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        // $this->middleware('auth');
     }
     
     public function index(Request $request)
@@ -27,13 +27,6 @@ class QuantifierController extends Controller
     {
         $quantifier = Quantifier::create($request->all());
         
-        return response()->json($quantifier, 201);
-    }
-
-    public function list(Request $request)
-    {
-        $quantifier = Quantifier::create($request->all());
-
         return response()->json($quantifier, 201);
     }
 

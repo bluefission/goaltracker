@@ -10,7 +10,7 @@ class LogController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        // $this->middleware('auth');
     }
     
     public function index(Request $request)
@@ -27,13 +27,6 @@ class LogController extends Controller
     {
         $log = Log::create($request->all());
         
-        return response()->json($log, 201);
-    }
-
-    public function list(Request $request)
-    {
-        $log = Log::create($request->all());
-
         return response()->json($log, 201);
     }
 

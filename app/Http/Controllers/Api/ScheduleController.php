@@ -10,7 +10,7 @@ class ScheduleController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        // $this->middleware('auth');
     }
     
     public function index(Request $request)
@@ -27,13 +27,6 @@ class ScheduleController extends Controller
     {
         $schedule = Schedule::create($request->all());
         
-        return response()->json($schedule, 201);
-    }
-
-    public function list(Request $request)
-    {
-        $schedule = Schedule::create($request->all());
-
         return response()->json($schedule, 201);
     }
 
