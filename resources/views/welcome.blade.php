@@ -46,10 +46,12 @@
             }
             .content p {
                 max-width: 1000px;
-                color: #000 !important;
+                color: #999;
                 font-weight: 600;
                 margin: auto;
                 text-align: left;
+                margin-bottom: 10px;
+                line-height: 1.5;
             }
             .title {
                 font-size: 84px;
