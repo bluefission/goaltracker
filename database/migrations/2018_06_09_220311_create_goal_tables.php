@@ -129,7 +129,7 @@ class CreateGoalTables extends Migration
             $table->timestamps();
         });
 
-        Schema::create('quanifiers', function (Blueprint $table) {
+        Schema::create('quantifiers', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->string('description')->nullable();
